@@ -3736,6 +3736,8 @@ class Player extends Component {
       assign(this.breakpoints_, breakpoints);
     }
 
+    this.updateCurrentBreakpoint_();
+
     // If we were not previously supporting breakpoints, add a listener.
     if (!hadBps) {
       this.on('playerresize', this.updateCurrentBreakpoint_);
